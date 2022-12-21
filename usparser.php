@@ -21,13 +21,13 @@ class usParser {
 						$arr[$j] = $arr[$j + 1];
 						$arr[$j + 1] = $temp;
 					}
-					}
 				}
+			}
 		}
 
 		return 	[
-				array_splice($arr, 0, $count / 2),
-				$arr
+			array_splice($arr, 0, $count / 2),
+			$arr
 		];
 	}
 	
