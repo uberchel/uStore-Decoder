@@ -8,7 +8,7 @@ require 'usparser.php';
 
 //header('Content-type: text/json');
 $URL = 'https://red.uboost.one/view/e4ddeac60ea001c63fb7fa9ce27a77c0/50953';
-$HASH = preg_match('#([a-f0-9]{32})#iS', $URL, $h) ? $h[1] : 'e4ddeac60ea001c63fb7fa9ce27a77c00';
+$HASH = preg_match('#([a-f0-9]{32})#iS', $URL, $h) ? $h[1] : 'e4ddeac60ea001c63fb7fa9ce27a77c0';
 
 $data = usParser::GetConfig($URL);
 if (isset($data)) {
@@ -42,4 +42,3 @@ if (isset($data)) {
 		</script>
 </body>
 </html>
-
