@@ -31,6 +31,20 @@ class usParser {
 		];
 	}
 	
+	public static function Encode($str = '') {
+		if (isset($str)) {
+			$key = rand(1, 9);
+			$chr = self::arrHash($key);
+			$str = str_replace('=', '', base64_encode(rawurlencode($str)));
+			for ($i = 0, $len = count($chr[0]), $str = strrev($str); $i < $len; $i++) {
+				 $str = str_replace($chr[1][$i], '__', $str);
+				 $str = str_replace($chr[0][$i], $chr[1][$i], $str);
+				 $str = str_replace('__', $chr[0][$i], $str);
+			}
+			return $str . $key;
+		}
+	}
+
 	public static function Decode($str = '', $isLink = false) {
 
 		if (isset($str)) {
