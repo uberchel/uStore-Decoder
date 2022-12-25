@@ -1,7 +1,7 @@
 <?php
 
 /***
- * Redirect module
+ * Reader JSON module
  */
 
  if (empty($_GET['id']) || empty($_GET['token'])) {
